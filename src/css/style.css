@@ -1,0 +1,194 @@
+@import url(./scrollbar.css);
+.flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-row{
+    flex-direction: row;
+}
+.align-center{
+    align-items: center;
+}
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap; /*não quebrar linha */
+    border-width: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+:root{
+    font-size: 62.5%;
+    background-color: #e9e5e5;
+    --ff-primary:'Montserrat', sans-serif;
+    --primary-color:#920034;
+    --text-color:#fff;
+    --input-color:#fff;
+    --details-color:#7C7C8A;
+    --bg-table:#D8D8D8;
+    --thead-color:#980040;
+    --trow-bg-odd:rgba(233, 233, 233, 0.5);
+    --trow-bg-even:rgba(144, 144, 144, 0.78);
+    --trow-color-odd:#474747;
+    --trow-color-even:#FAFAFA;
+}
+body{
+    font-size: 1.6rem;
+    font-family: var(--ff-primary);
+    color: var(--text-color);
+}
+header{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container{
+    width: min(85rem, 100vw);
+    margin: 0 auto;
+    padding: 7rem .1rem;
+    gap: 5.8rem;
+}
+.add-github-user{
+    gap:.8rem;
+}
+input{
+    background-color: var(--input-color);
+    color: var(--details-color);
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.4rem;
+    padding: 1rem 1.8rem;
+}
+.add-github-user button{
+    gap:.8rem;
+    padding: .6rem 2rem;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .4s;
+    border: none;
+}
+.add-github-user button:hover{
+    filter: brightness(1.25);
+}
+.image img{
+    object-fit: contain;
+    width: 2rem;
+}
+
+td,th{
+    padding: 1.4rem;
+    border-collapse:collapse;
+    font-size: 1.2rem;
+}
+th{
+    font-weight: 500;
+    background-color: var(--thead-color);
+    font-size: 1.3rem;
+    position: sticky; /* make the table heads sticky */
+    top: 0;
+}
+.empty{
+    height: 60vh;
+    background: var(--bg-table);
+    align-items: center;
+}
+
+.text-empty-table{
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    align-items: center;
+    color: var(--details-color);
+    background-color: transparent;
+}
+
+.table-content{
+    max-height: 65vh;
+    overflow-y: auto;
+    border-radius: 1.6rem  1.6rem 0 0;
+    border: .1rem solid var(--thead-color);
+    box-shadow: 
+         0px 4px 16px 0px rgba(0, 0, 0, 0.25),
+        inset 0px 11px 14px -13px rgb(73, 70, 70),
+        inset 0px -11px 14px -10px rgb(59, 57, 57);
+}
+table{
+    width: 100%;
+    border-radius: 1.6rem 1.6rem 0 0;
+    border-spacing: 0;
+}
+
+thead{
+    box-shadow: 0px -11px 14px -10px rgb(77, 74, 74);
+}
+
+th:first-child{
+    border-top-left-radius: 1rem;
+}
+th:last-child{
+    border-top-right-radius: 1rem;
+}
+th:not(:last-child){
+    text-align: left;
+}
+
+td{
+    border-bottom: .1rem solid var(--thead-color);
+}
+
+.empty td,.empty td .text-empty-table,.empty td .text-empty-table *{
+    background-color: transparent;
+}
+
+tr:nth-child(odd) *:not(th){
+    background-color: var(--trow-bg-odd);
+    color: var(--trow-color-odd);
+}
+tr:nth-child(even){
+    background: var(--trow-bg-even);
+    color: var(--trow-color-even);
+}
+
+
+.icon-delete{
+    text-align: center;
+}
+.icon-delete button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.user{
+    gap: 1rem;
+}
+.user a{
+    text-decoration: none;
+}
+.user a p{
+    font-weight: 500;
+}
+.user a span{
+    font-size: 1.2rem;
+}
+.profile-image img{
+    width: 56px;
+    border-radius:9999px;
+    object-fit: cover;
+}

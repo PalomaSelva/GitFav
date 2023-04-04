@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git fav</title>
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/responsive.css">
+    <script src="./src/js/main.js" type="module" defer></script>
+</head>
+<body>
+    <div id="app" class="container flex flex-column">
+        <header class="flex">
+            <div class="logo">
+                <img src="./assets/gitfav.svg" alt="logo do gitfav: {estrela} gitfav">
+            </div>
+                
+            <div class="flex add-github-user">
+                <label for="input-search" class="sr-only">Usuário do Github</label>
+                <input type="text" placeholder="Digite o Github username" id="input-search">
+                <button class="flex align-center">
+                    <div class="image">
+                        <img src="./assets/favorite.svg" alt="ícone de estrela">
+                    </div>
+                    Favoritar
+                </button>
+            </div>
+        </header>
+        <div class="table-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Usuários</th>
+                        <th>Repositórios</th>
+                        <th>Seguidores</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead> 
+                <tbody> 
+                </tbody>
+                </table>
+        </div>
+    </div>
+</body>
+</html>
